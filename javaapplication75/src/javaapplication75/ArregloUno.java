@@ -16,22 +16,13 @@ public class ArregloUno {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+
         int[] c = new int[12];
-        
+        c[4] = 10;
+
+        System.out.printf("%d + %d = %d\n", c[1], c[4], c[1] + c[4]);
+        System.out.printf("El tamaño del arreglo es: %d\n", c.length);
         
     }
-    
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
