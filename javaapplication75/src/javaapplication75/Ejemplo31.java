@@ -17,18 +17,17 @@ public class Ejemplo31 {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
-        Random aleatorios = new Random();
         double cantidad = 0;
-        int[] datos = new int[6];
+        int[] datos = new int[6]; //  mi arreglo tipo int con 6 valores 
         int notas = 0;
-        String[] rangos = {"0-8", "8.1-12", "12.1-16", "16.1-19", "19.1-20", "20.1-adelante"};
-        System.out.println("Ingrese el numero de notas: ");
+        String[] rangos = {"0-8", "8.1-12", "12.1-16", "16.1-19", "19.1-20", "20.1-adelante"}; // mi arreglo tipo String con 6 valores
+        System.out.println("Ingrese el numero de notas: "); //  las veces que repitire el proceso de validacion de notas
         notas = entrada.nextInt();
 
         for (int i = 1; i <= notas; i++) {
-            System.out.printf("Ingresa la nota %d\n", i);
+            System.out.printf("Ingresa la nota %d\n", i); // ingreso las notas
             cantidad = entrada.nextDouble();
-
+            //  Valido cada nota ingresada y acumulo +1 dependiendo su rango
             if (cantidad <= 8) {
                 datos[0] = datos[0] + 1;
             } else {
@@ -51,11 +50,13 @@ public class Ejemplo31 {
                 }
             }
         }
-            System.out.println("Notas ingresadas\nRangos:");
+        // Salida de datos
+        System.out.println("Notas ingresadas\nRangos:");
 
-            for (notas = 0; notas < datos.length; notas++) {
-                System.out.printf("%s = %d\n", rangos[notas], datos[notas]);
-            }
-
+        for (notas = 0; notas < datos.length; notas++) {
+            //  escribo los datos finales por cada posicion de mi arreglo "datos"
+            System.out.printf("%s = %d\n", rangos[notas], datos[notas]);
         }
+
     }
+}
